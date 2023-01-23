@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <main class="m-5 d-sm-flex justify-content-between">
+        <div class="card filter-option bg-dark text-white rounded-4 position-relative">
+            <h4 class="text-center pt-4 position-sticky top-0 bg-dark">Filter Options</h4>
+            <div class="card-body">
+                <div class="border-bottom p-3">
+                    <div class="d-flex justify-content-between mb-2">
+                        <div>Gray Scale</div>
+                        <div class="fw-bolder" id="grayScaleValue">0%</div>
+                    </div>
+                    <input type="range" value="0" class="w-100 input" id="grayScale" oninput="grayScale()">
+                </div>
+                <div class="border-bottom p-3">
+                    <div class="d-flex justify-content-between mb-2">
+                        <div>Sepia</div>
+                        <div class="fw-bolder" id="sepiaValue">0%</div>
+                    </div>
+                    <input type="range" value="0" class="w-100 input" id="sepia" oninput="sepia()">
+                </div>
+                <div class="border-bottom p-3">
+                    <div class="d-flex justify-content-between mb-2">
+                        <div>Blur</div>
+                        <div class="fw-bolder" id="blurValue">0px</div>
+                    </div>
+                    <input type="range" value="0" step="1" max="10" class="w-100 input" id="blur" oninput="blurs()">
+                </div>
+                <div class="border-bottom p-3">
+                    <div class="d-flex justify-content-between mb-2">
+                        <div>Brightness</div>
+                        <div class="fw-bolder" id="brightnessValue">100%</div>
+                    </div>
+                    <input type="range" value="100" max="200" class="w-100 input" id="brightness"
+                        oninput="brightness()">
+                </div>
+                <div class="border-bottom p-3">
+                    <div class="d-flex justify-content-between mb-2">
+                        <div>Hue Rotate</div>
+                        <div class="fw-bolder" id="hueRotateValue">0°</div>
+                    </div>
+                    <input type="range" value="0" max="360" class="w-100 input" id="hueRotate" oninput="hueRotate()">
+                </div>
+                <div class="border-bottom p-3">
+                    <div class="d-flex justify-content-between mb-2">
+                        <div>Saturate</div>
+                        <div class="fw-bolder" id="saturateValue">100%</div>
+                    </div>
+                    <input type="range" value="100" max="1000" class="w-100 input" id="saturate" oninput="saturate()">
+                </div>
+                <div class="border-bottom p-3">
+                    <div class="d-flex justify-content-between mb-2">
+                        <div>Opacity</div>
+                        <div class="fw-bolder" id="opacityValue">100%</div>
+                    </div>
+                    <input type="range" value="100" class="w-100 input" id="opacity" oninput="opacity()">
+                </div>
+                <div class="border-bottom p-3">
+                    <div class="d-flex justify-content-between mb-2">
+                        <div>Contrast</div>
+                        <div class="fw-bolder" id="contrastValue">100%</div>
+                    </div>
+                    <input type="range" value="100" max="1000" class="w-100 input" id="contrast" oninput="contrast()">
+                </div>
+                <div class="border-bottom p-3">
+                    <div class="d-flex justify-content-between mb-2">
+                        <div>Invert</div>
+                        <div class="fw-bolder" id="invertValue">0%</div>
+                    </div>
+                    <input type="range" value="0" class="w-100 input" id="invert" oninput="invert()">
+                </div>
+            </div>
+        </div>
+        <div class="img-area rounded-4 mt-3 mt-sm-0 d-flex">
+            <img src="photo.jpg" alt="photo" width="80%" id="img" class="img-fluid img rounded-4 mt-sm-5">
+            <textarea class="mt-5 code-area fw-bolder fs-6 p-1" id="codeArea" readonly></textarea>
+            <button class="btn btn-success p-2 mt-3" id="copy">Kopyala</button>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
